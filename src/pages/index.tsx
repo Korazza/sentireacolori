@@ -3,7 +3,7 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 
 import styles from '@/styles/Home.module.css'
 
-export default function Home() {
+const Home = () => {
 	const { data: session } = useSession()
 
 	return (
@@ -30,3 +30,5 @@ export default function Home() {
 		</>
 	)
 }
+
+export default Home
