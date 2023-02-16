@@ -23,7 +23,7 @@ export default function Home() {
 					{session === null ? (
 						<button onClick={() => signIn()}>Login</button>
 					) : (
-						<button>Logged in</button>
+						<button onClick={() => signOut()}>Sign out</button>
 					)}
 				</div>
 			</main>
