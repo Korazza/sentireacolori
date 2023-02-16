@@ -22,7 +22,8 @@ export default function Navbar() {
 							<br />
 							<strong>{session.user.email ?? session.user.name}</strong>
 						</span>
-						<button onClick={() => signOut()}>Login</button>
+						<br />
+						<button onClick={() => signOut()}>Sign Out</button>
 					</>
 				) : (
 					<>
