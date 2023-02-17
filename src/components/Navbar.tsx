@@ -6,7 +6,7 @@ export default function Navbar() {
 	const { data: session, status } = useSession()
 
 	return (
-		<header className={styles.signedInStatus}>
+		<header className={styles.navbar}>
 			<div className={styles.loaded}>
 				{status === 'authenticated' ? (
 					<>
