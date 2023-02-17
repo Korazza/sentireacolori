@@ -4,6 +4,11 @@ import GoogleProvider from 'next-auth/providers/google'
 
 export default NextAuth({
 	secret: process.env.NEXTAUTH_SECRET,
+	theme: {
+		colorScheme: 'auto',
+		brandColor: '#e7736e',
+		//buttonText: '',
+	},
 	providers: [
 		FacebookProvider({
 			clientId: process.env.FACEBOOK_ID as string,
