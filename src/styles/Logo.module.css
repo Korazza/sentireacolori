@@ -1,0 +1,14 @@
+.logo {
+  display: inline-block;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.logoText1 {
+  font-size: 28px;
+  font-style: italic;
+}
+
+.logoText2 {
+  font-size: 30px;
+}

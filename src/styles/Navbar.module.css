@@ -1,0 +1,33 @@
+.navbar {
+  margin: 4% 8%;
+  padding: 0.8em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  place-items: center;
+  background-color: #e7736e9a;
+}
+
+.navigationContainer {
+  width: 100%;
+}
+
+.navigation {
+  margin-left: 12em;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navigationLink {
+  font-weight: 600;
+  list-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navigationLink:hover {
+  text-shadow: 0 0 10px #ffffff88;
+  transition: text-shadow ease-in-out 150ms;
+}

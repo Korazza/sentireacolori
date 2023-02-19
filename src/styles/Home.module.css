@@ -1,0 +1,32 @@
+.section1 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/bg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.content1 {
+  margin-top: 26%;
+  margin-left: 53%;
+  font-size: 36px;
+  color: #ffffff
+}
+
+.fanzineBtn {
+  border: none;
+  padding: 0.5em 3em;
+  border-radius: 25px;
+  background-color: #627d7d;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.fanzineBtn:hover {
+  text-shadow: 0 0 10px #ffffff88;
+  transition: text-shadow ease-in-out 150ms;
+}
