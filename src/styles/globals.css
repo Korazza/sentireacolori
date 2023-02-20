@@ -9,6 +9,14 @@ html, body {
   height: 100vh;
 }
 
+@font-face {
+  font-family: 'KG Happy';
+  src: url('/fonts/KGHAPPY.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 .container {
   display: flex;
   flex-direction: column;
