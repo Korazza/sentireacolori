@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<main className='container'>
 			<Navbar />
-			<section className={styles.section1}>
+			<section id='emozioni' className={styles.section1}>
 				<div className={styles.content1}>
 					Impariamo a conoscere
 					<br />
@@ -16,7 +16,7 @@ export default function Home() {
 					<button className={styles.fanzineBtn}>Scopri la Fanzine</button>
 				</div>
 			</section>
-			<section className={styles.section2}>
+			<section id='abstract' className={styles.section2}>
 				<div className={styles.content2}>
 					<strong>
 						Ciao! Benvenut*
@@ -48,7 +48,7 @@ export default function Home() {
 					</strong>
 				</div>
 			</section>
-			<section className={styles.section3}>
+			<section id='shop' className={styles.section3}>
 				<div className={styles.fanzine}>
 					<div>
 						<Image
@@ -73,9 +73,6 @@ export default function Home() {
 						className={styles.copertinaFanzine}
 					/>
 				</div>
-			</section>
-			<section className={styles.section4}>
-				<div className={styles.content4}></div>
 			</section>
 		</main>
 	)
