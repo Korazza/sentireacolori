@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import Logo from './Logo'
 import styles from '@/styles/Navbar.module.css'
 
-const links = ['Emozioni', 'Abstract', 'Login', 'Shop']
+const links = ['Emozioni', 'Abstract', 'Shop']
 
 export default function Navbar() {
 	const { data: session, status } = useSession()
@@ -27,9 +28,14 @@ export default function Navbar() {
 				<ul className={styles.navigation}>
 					{links.map((link) => (
 						<li key={link} className={styles.navigationLink}>
-							{link}
+							<Link href={`#${link.toLowerCase()}`} scroll={false}>
+								{link}
+							</Link>
 						</li>
 					))}
+					<li key='Login' className={styles.navigationLink}>
+						Login
+					</li>
 				</ul>
 			</nav>
 		</header>
