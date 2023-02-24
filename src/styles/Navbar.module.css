@@ -3,6 +3,7 @@
   padding: 0.8em;
   position: fixed;
   width: 84%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -10,20 +11,25 @@
   background-color: #e7736ebf;
   backdrop-filter: blur(3px);
   z-index: 1000;
+  user-select: none;
 }
 
 .navigationContainer {
+  position: relative;
   width: 100%;
+  height: 100%;
 }
 
 .navigation {
   margin-left: 12em;
   width: 50%;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.navigationLink {
+
+.navigation li {
   font-weight: 600;
   list-style: none;
   color: #ffffff;
@@ -31,7 +37,35 @@
   font-size: 18px;
 }
 
-.navigationLink:hover {
+.navigation li:hover {
   text-shadow: 0 0 10px #ffffff88;
   transition: text-shadow ease-in-out 150ms;
+}
+
+.signout {
+  font-weight: 600;
+  list-style: none;
+  color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  text-shadow: none;
+}
+
+.signout:hover {
+  text-shadow: none;
+  text-decoration: underline;
+}
+
+.user {
+  display: inline-flex;
+  margin-left: 0.6em;
+  height: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.user img {
+  margin-right: 0.4em;
+  border-radius: 50%;
 }

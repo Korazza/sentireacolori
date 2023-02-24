@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import Logo from './Logo'
@@ -11,30 +12,37 @@ export default function Navbar() {
 
 	return (
 		<header className={styles.navbar}>
-			{/*
-			<div>
-				{status === 'authenticated' ? (
-					<>
-						<span>{session.user?.name ?? session.user?.email}</span>
-						<button onClick={() => signOut()}>Sign Out</button>
-					</>
-				) : (
-					<button onClick={() => signIn()}>Login</button>
-				)}
-			</div>
-			*/}
 			<Logo />
 			<nav className={styles.navigationContainer}>
 				<ul className={styles.navigation}>
 					{links.map((link) => (
-						<li key={link} className={styles.navigationLink}>
+						<li key={link}>
 							<Link href={`#${link.toLowerCase()}`} scroll={false}>
 								{link}
 							</Link>
 						</li>
 					))}
-					<li key='Login' className={styles.navigationLink}>
-						Login
+					{status === 'authenticated' ? (
+						<span className={styles.user}>
+							<Image
+								src={session.user?.image!}
+								alt={`${session.user?.name} image`}
+								width='32'
+								height='32'
+							/>
+							{session?.user?.name ?? session?.user?.email}
+						</span>
+					) : null}
+					<li key='Login'>
+						<div>
+							{status === 'authenticated' ? (
+								<span className={styles.signout} onClick={() => signOut()}>
+									Esci
+								</span>
+							) : (
+								<span onClick={() => signIn()}>Login</span>
+							)}
+						</div>
 					</li>
 				</ul>
 			</nav>

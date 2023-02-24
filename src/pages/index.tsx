@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import styles from '@/styles/Home.module.css'
 
 export default function Home() {
@@ -50,30 +51,34 @@ export default function Home() {
 			</section>
 			<section id='shop' className={styles.section3}>
 				<div className={styles.fanzine}>
-					<div>
+					<span>
 						<Image
 							src='/images/fanzine-digitale.png'
 							alt='Fanzine digitale'
 							width='373'
 							height='528'
+							className={styles.copertinaFanzine}
 						/>
-						<div className={styles.contentFanzine}>
-							<strong>
-								Acquista la tua fanzine!
-								<br />
-								disponibile anche in versione digitale
-							</strong>
-						</div>
-					</div>
-					<Image
-						src='/images/fanzine.png'
-						alt='Fanzine'
-						width='372'
-						height='496'
-						className={styles.copertinaFanzine}
-					/>
+					</span>
+					<span>
+						<Image
+							src='/images/fanzine.png'
+							alt='Fanzine'
+							width='373'
+							height='496'
+							className={styles.copertinaFanzine}
+						/>
+					</span>
+					<div className={styles.contentFanzine}>
+					<strong>
+						Acquista la tua fanzine!
+						<br />
+						disponibile anche in versione digitale
+					</strong>
+				</div>
 				</div>
 			</section>
+			<Footer />
 		</main>
 	)
 }

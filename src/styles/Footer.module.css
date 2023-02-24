@@ -1,0 +1,50 @@
+.footer {
+  width: 100%;
+  font-size: 14px;
+  height: fit-content;
+  user-select: none;
+}
+
+.info {
+  padding: 1.5em 5em;
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  width: 100%;
+  background-color: #f5ae9ebf;
+  color: #9e403b;
+  backdrop-filter: blur(1px);
+}
+
+.info .heading {
+  font-weight: 600;
+}
+
+.info .number {
+  font-weight: 500;
+  color: #e7736e;
+}
+
+.info .social {
+  display: inline-flex;
+  place-items: center;
+}
+
+.info .social img {
+  margin-right: 0.8em;
+}
+
+.info .contatti, .info .emotincolor {
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.copyright {
+  padding: 0.8em 0;
+  width: 100%;
+  text-align: center;
+  background-color: #e7736e;
+  color: #ffffff;
+}
