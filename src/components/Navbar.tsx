@@ -24,12 +24,14 @@ export default function Navbar() {
 					))}
 					{status === 'authenticated' ? (
 						<span className={styles.user}>
-							<Image
-								src={session.user?.image!}
-								alt={`${session.user?.name} image`}
-								width='32'
-								height='32'
-							/>
+							{session.user?.image ? (
+								<Image
+									src={session.user?.image}
+									alt='User image'
+									width='32'
+									height='32'
+								/>
+							) : null}
 							{session?.user?.name ?? session?.user?.email}
 						</span>
 					) : null}
