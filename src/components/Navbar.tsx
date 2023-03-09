@@ -40,8 +40,8 @@ export default function Navbar() {
 								<Image
 									src={session.user?.image}
 									alt='User image'
-									width='32'
-									height='32'
+									width='28'
+									height='28'
 								/>
 							) : null}
 							{session?.user?.name ?? session?.user?.email}
