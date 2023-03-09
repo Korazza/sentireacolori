@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -8,13 +9,15 @@ export default function Home() {
 	return (
 		<main className='container'>
 			<Navbar />
-			<section id='emozioni' className={styles.section1}>
+			<section className={styles.section1}>
 				<div className={styles.content1}>
 					Impariamo a conoscere
 					<br />
 					le nostre emozioni insieme
 					<br />
-					<button className={styles.fanzineBtn}>Scopri la Fanzine</button>
+					<Link href='#shop'>
+						<button className={styles.fanzineBtn}>Scopri la Fanzine</button>
+					</Link>
 				</div>
 			</section>
 			<section id='abstract' className={styles.section2}>
@@ -70,12 +73,12 @@ export default function Home() {
 						/>
 					</span>
 					<div className={styles.contentFanzine}>
-					<strong>
-						Acquista la tua fanzine!
-						<br />
-						disponibile anche in versione digitale
-					</strong>
-				</div>
+						<strong>
+							Acquista la tua fanzine!
+							<br />
+							disponibile anche in versione digitale
+						</strong>
+					</div>
 				</div>
 			</section>
 			<Footer />

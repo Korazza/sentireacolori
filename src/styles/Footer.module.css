@@ -2,6 +2,7 @@
   width: 100%;
   font-size: 14px;
   height: fit-content;
+  box-shadow: 0 0 16px #00000020;
 }
 
 .info {

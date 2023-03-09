@@ -41,6 +41,7 @@ a {
   flex-direction: column;
   background-color: #f1c9c0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .container::after {

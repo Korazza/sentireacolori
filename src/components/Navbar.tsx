@@ -5,20 +5,32 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 import Logo from './Logo'
 import styles from '@/styles/Navbar.module.css'
 
-const links = ['Emozioni', 'Abstract', 'Shop']
+interface NavigationItem {
+	label: string
+	link: string
+	scroll?: boolean
+}
+
+const navItems: NavigationItem[] = [
+	{ label: 'Emozioni', link: '/emozioni' },
+	{ label: 'Abstract', link: '/#abstract', scroll: false },
+	{ label: 'Shop', link: '/shop' },
+]
 
 export default function Navbar() {
 	const { data: session, status } = useSession()
 
 	return (
 		<header className={styles.navbar}>
-			<Logo />
+			<Link href='/'>
+				<Logo />
+			</Link>
 			<nav className={styles.navigationContainer}>
 				<ul className={styles.navigation}>
-					{links.map((link) => (
-						<li key={link}>
-							<Link href={`#${link.toLowerCase()}`} scroll={false}>
-								{link}
+					{navItems.map((navItem) => (
+						<li key={navItem.label.toLocaleLowerCase()}>
+							<Link href={navItem.link} scroll={navItem.scroll}>
+								{navItem.label}
 							</Link>
 						</li>
 					))}
