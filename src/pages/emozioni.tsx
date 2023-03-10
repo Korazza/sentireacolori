@@ -4,31 +4,90 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import styles from '@/styles/Emozioni.module.css'
+import tristezza from '../../public/images/emozioni/tristezza.png'
+import rabbia from '../../public/images/emozioni/rabbia.png'
+import felicita from '../../public/images/emozioni/felicita.png'
 
 interface Emotion {
 	backgroundColor: string
 	name: string
-	imageSrc: string
-	imageWidth: number
-	imageHeight: number
-	styleImageLeft: string
-	styleImageBottom: string
-	styleImageWidth: string
-	styleImageHeight: string
+	image: JSX.Element
 	content: string
 }
+
+const imageTristezza = (
+	<div
+		style={{
+			left: '40%',
+			bottom: '22%',
+			width: '70%',
+			height: '70%',
+		}}
+		className={styles.imgContainer}
+	>
+		<Image
+			src={tristezza}
+			alt='tristezza'
+			fill={true}
+			placeholder='blur'
+			className={styles.emotionImg}
+			style={{
+				objectFit: 'contain',
+			}}
+		/>
+	</div>
+)
+
+const imageRabbia = (
+	<div
+		style={{
+			left: '30%',
+			bottom: '18%',
+			width: '80%',
+			height: '80%',
+		}}
+		className={styles.imgContainer}
+	>
+		<Image
+			src={rabbia}
+			alt='rabbia'
+			fill={true}
+			placeholder='blur'
+			style={{
+				objectFit: 'contain',
+			}}
+		/>
+	</div>
+)
+
+const imageFelicita = (
+	<div
+		style={{
+			left: '32%',
+			bottom: '22%',
+			width: '80%',
+			height: '80%',
+		}}
+		className={styles.imgContainer}
+	>
+		<Image
+			src={felicita}
+			alt='felicita'
+			fill={true}
+			placeholder='blur'
+			className={styles.emotionImg}
+			style={{
+				objectFit: 'contain',
+			}}
+		/>
+	</div>
+)
 
 const EMOTIONS: Emotion[] = [
 	{
 		backgroundColor: '#f5ae9e',
 		name: 'la tristezza',
-		imageSrc: '/images/emozioni/tristezza.png',
-		imageWidth: 1050,
-		imageHeight: 740,
-		styleImageLeft: '36%',
-		styleImageBottom: '20%',
-		styleImageWidth: '60%',
-		styleImageHeight: '70%',
+		image: imageTristezza,
 		content: `<p>
 		Non esiste una vita senza tristezza, è quasi impossibile non
 		<br />
@@ -86,13 +145,7 @@ const EMOTIONS: Emotion[] = [
 	{
 		backgroundColor: '#f1c9c0',
 		name: 'la rabbia',
-		imageSrc: '/images/emozioni/rabbia.png',
-		imageWidth: 1065,
-		imageHeight: 1392,
-		styleImageLeft: '42%',
-		styleImageBottom: '8%',
-		styleImageWidth: '42%',
-		styleImageHeight: '90%',
+		image: imageRabbia,
 		content: `<p>
 		La rabbia è uno di quelle emozioni che ci insegnano a guardarla
 		<br />
@@ -140,13 +193,7 @@ const EMOTIONS: Emotion[] = [
 	{
 		backgroundColor: '#f5ae9e',
 		name: 'la felicità',
-		imageSrc: '/images/emozioni/felicita.png',
-		imageWidth: 1050,
-		imageHeight: 740,
-		styleImageLeft: '32%',
-		styleImageBottom: '15%',
-		styleImageWidth: '70%',
-		styleImageHeight: '80%',
+		image: imageFelicita,
 		content: `<p>
 		Sappiamo tutti che la vita è come una specie di altalena, delle
 		<br />
@@ -219,19 +266,7 @@ export default function Emozioni() {
 				</button>
 			) : null}
 			<section className={styles.section}>
-				<Image
-					src={emotion.imageSrc}
-					alt={emotion.name}
-					width={emotion.imageWidth}
-					height={emotion.imageHeight}
-					className={styles.emotionImg}
-					style={{
-						left: emotion.styleImageLeft,
-						bottom: emotion.styleImageBottom,
-						width: emotion.styleImageWidth,
-						height: emotion.styleImageHeight,
-					}}
-				/>
+				{emotion.image}
 				<h1>
 					Ti spiego
 					<br />
