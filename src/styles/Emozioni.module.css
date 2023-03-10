@@ -50,6 +50,11 @@
   z-index: -1;
 }
 
+.imgContainer img {
+  object-fit: contain;
+  transition: opacity 300ms ease-in-out;
+}
+
 .section h1 {
   margin-top: 10%;
   margin-left: 8%;

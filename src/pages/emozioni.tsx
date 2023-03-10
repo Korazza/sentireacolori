@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import Navbar from '@/components/Navbar'
@@ -13,74 +13,6 @@ interface Emotion {
 	name: string
 	content: string
 }
-
-const imageTristezza = (
-	<div
-		style={{
-			left: '40%',
-			bottom: '22%',
-			width: '70%',
-			height: '70%',
-		}}
-		className={styles.imgContainer}
-	>
-		<Image
-			src={tristezza}
-			alt='tristezza'
-			fill={true}
-			placeholder='blur'
-			className={styles.emotionImg}
-			style={{
-				objectFit: 'contain',
-			}}
-		/>
-	</div>
-)
-
-const imageRabbia = (
-	<div
-		style={{
-			left: '30%',
-			bottom: '18%',
-			width: '80%',
-			height: '80%',
-		}}
-		className={styles.imgContainer}
-	>
-		<Image
-			src={rabbia}
-			alt='rabbia'
-			fill={true}
-			placeholder='blur'
-			style={{
-				objectFit: 'contain',
-			}}
-		/>
-	</div>
-)
-
-const imageFelicita = (
-	<div
-		style={{
-			left: '32%',
-			bottom: '22%',
-			width: '80%',
-			height: '80%',
-		}}
-		className={styles.imgContainer}
-	>
-		<Image
-			src={felicita}
-			alt='felicita'
-			fill={true}
-			placeholder='blur'
-			className={styles.emotionImg}
-			style={{
-				objectFit: 'contain',
-			}}
-		/>
-	</div>
-)
 
 const EMOTIONS: Emotion[] = [
 	{
@@ -262,9 +194,63 @@ export default function Emozioni() {
 				</button>
 			) : null}
 			<section className={styles.section}>
-				{emotion.name === 'la tristezza' ? imageTristezza : null}
-				{emotion.name === 'la rabbia' ? imageRabbia : null}
-				{emotion.name === 'la felicità' ? imageFelicita : null}
+				<div
+					className={styles.imgContainer}
+					style={{
+						left: '40%',
+						bottom: '22%',
+						width: '70%',
+						height: '70%',
+					}}
+				>
+					<Image
+						src={tristezza}
+						alt='tristezza'
+						fill={true}
+						placeholder='blur'
+						style={{
+							opacity: emotion.name === 'la tristezza' ? 1 : 0,
+						}}
+					/>
+				</div>
+				<div
+					style={{
+						left: '30%',
+						bottom: '18%',
+						width: '80%',
+						height: '80%',
+					}}
+					className={styles.imgContainer}
+				>
+					<Image
+						src={rabbia}
+						alt='rabbia'
+						fill={true}
+						placeholder='blur'
+						style={{
+							opacity: emotion.name === 'la rabbia' ? 1 : 0,
+						}}
+					/>
+				</div>
+				<div
+					className={styles.imgContainer}
+					style={{
+						left: '32%',
+						bottom: '22%',
+						width: '80%',
+						height: '80%',
+					}}
+				>
+					<Image
+						src={felicita}
+						alt='felicità'
+						fill={true}
+						placeholder='blur'
+						style={{
+							opacity: emotion.name === 'la felicità' ? 1 : 0,
+						}}
+					/>
+				</div>
 				<h1>
 					Ti spiego
 					<br />
