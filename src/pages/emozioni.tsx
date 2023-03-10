@@ -11,7 +11,6 @@ import felicita from '../../public/images/emozioni/felicita.png'
 interface Emotion {
 	backgroundColor: string
 	name: string
-	image: JSX.Element
 	content: string
 }
 
@@ -87,7 +86,6 @@ const EMOTIONS: Emotion[] = [
 	{
 		backgroundColor: '#f5ae9e',
 		name: 'la tristezza',
-		image: imageTristezza,
 		content: `<p>
 		Non esiste una vita senza tristezza, è quasi impossibile non
 		<br />
@@ -145,7 +143,6 @@ const EMOTIONS: Emotion[] = [
 	{
 		backgroundColor: '#f1c9c0',
 		name: 'la rabbia',
-		image: imageRabbia,
 		content: `<p>
 		La rabbia è uno di quelle emozioni che ci insegnano a guardarla
 		<br />
@@ -193,7 +190,6 @@ const EMOTIONS: Emotion[] = [
 	{
 		backgroundColor: '#f5ae9e',
 		name: 'la felicità',
-		image: imageFelicita,
 		content: `<p>
 		Sappiamo tutti che la vita è come una specie di altalena, delle
 		<br />
@@ -266,7 +262,9 @@ export default function Emozioni() {
 				</button>
 			) : null}
 			<section className={styles.section}>
-				{emotion.image}
+				{emotion.name === 'la tristezza' ? imageTristezza : null}
+				{emotion.name === 'la rabbia' ? imageRabbia : null}
+				{emotion.name === 'la felicità' ? imageFelicita : null}
 				<h1>
 					Ti spiego
 					<br />
