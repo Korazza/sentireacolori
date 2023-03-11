@@ -32,7 +32,7 @@ export default function Shop() {
 							</div>
 						</div>
 						<div className={styles.price}>€ 21.50</div>
-						<button onClick={() => signIn} className={styles.shopFanzine}>
+						<button onClick={() => signIn()} className={styles.shopFanzine}>
 							Acquista il tuo libro
 						</button>
 					</div>
