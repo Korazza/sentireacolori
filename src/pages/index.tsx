@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import styles from '@/styles/Home.module.css'
+import fanzine from '../../public/images/rivista.png'
 
 export default function Home() {
 	return (
@@ -15,8 +16,11 @@ export default function Home() {
 					<br />
 					le nostre emozioni insieme
 					<br />
-					<Link href='#shop'>
-						<button className={styles.fanzineBtn}>Scopri la Fanzine</button>
+					<Link
+						href='https://issuu.com/francescabarchiesi/docs/francesca_barchiesi_18417_sentire_a_colori_libro_c'
+						target='_blank'
+					>
+						<button className={styles.fanzineBtn}>Scopri il libro</button>
 					</Link>
 				</div>
 			</section>
@@ -54,31 +58,13 @@ export default function Home() {
 			</section>
 			<section id='shop' className={styles.section3}>
 				<div className={styles.fanzine}>
-					<span>
-						<Image
-							src='/images/fanzine-digitale.png'
-							alt='Fanzine digitale'
-							width='373'
-							height='528'
-							className={styles.copertinaFanzine}
-						/>
-					</span>
-					<span>
-						<Image
-							src='/images/fanzine.png'
-							alt='Fanzine'
-							width='373'
-							height='496'
-							className={styles.copertinaFanzine}
-						/>
-					</span>
-					<div className={styles.contentFanzine}>
-						<strong>
-							Acquista la tua fanzine!
-							<br />
-							disponibile anche in versione digitale
-						</strong>
-					</div>
+					<Image
+						src={fanzine}
+						alt='Fanzine'
+						fill={true}
+						placeholder='blur'
+						className={styles.copertinaFanzine}
+					/>
 				</div>
 			</section>
 			<Footer />

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { signIn } from 'next-auth/react'
 
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -10,17 +11,8 @@ export default function Shop() {
 		<main className={styles.container}>
 			<Navbar />
 			<section className={styles.section}>
-				<div className={styles.fanzine}>
-					<span>
-						<Image
-							src='/images/fanzine-digitale.png'
-							alt='Fanzine digitale'
-							width='373'
-							height='528'
-							className={styles.copertinaFanzine}
-						/>
-					</span>
-					<span>
+				<div className={styles.shop}>
+					<div className={styles.fanzine}>
 						<Image
 							src='/images/fanzine.png'
 							alt='Fanzine'
@@ -28,13 +20,21 @@ export default function Shop() {
 							height='496'
 							className={styles.copertinaFanzine}
 						/>
-					</span>
-					<div className={styles.contentFanzine}>
-						<strong>
-							Acquista la tua fanzine!
-							<br />
-							disponibile anche in versione digitale
-						</strong>
+						<span className={styles.digitalContent}>
+							(disponibile anche in versione digitale)
+						</span>
+					</div>
+					<div className={styles.infoFanzine}>
+						<div className={styles.infoTitle}>
+							Emotincolor
+							<div className={styles.infoSubTitle}>
+								<i>Impariamo a conoscerci</i>
+							</div>
+						</div>
+						<div className={styles.price}>€ 21.50</div>
+						<button onClick={() => signIn} className={styles.shopFanzine}>
+							Acquista il tuo libro
+						</button>
 					</div>
 				</div>
 			</section>
