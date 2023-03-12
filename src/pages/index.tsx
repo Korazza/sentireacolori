@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import styles from '@/styles/Home.module.css'
+import rabbia from '../../public/images/emozioni/rabbia.png'
 import fanzine from '../../public/images/rivista.png'
 
 export default function Home() {
@@ -25,7 +26,13 @@ export default function Home() {
 				</div>
 			</section>
 			<section id='abstract' className={styles.section2}>
-				<div className={styles.content2}>
+				<div
+					className={styles.content2}
+					data-aos='fade-right'
+					data-aos-delay='50'
+					data-aos-offset='350'
+					data-aos-easing='ease-in-out'
+				>
 					<strong>
 						Ciao! Benvenut*
 						<br />
@@ -57,12 +64,27 @@ export default function Home() {
 				</div>
 			</section>
 			<section id='shop' className={styles.section3}>
+				<div className={styles.rabbia}>
+					<Image
+						src={rabbia}
+						alt='Rabbia'
+						fill={true}
+						data-aos='fade-up-right'
+						data-aos-delay='350'
+						data-aos-offset='450'
+						data-aos-easing='linear'
+						className={styles.rabbiaImg}
+					/>
+				</div>
 				<div className={styles.fanzine}>
 					<Image
 						src={fanzine}
 						alt='Fanzine'
 						fill={true}
-						placeholder='blur'
+						data-aos='zoom-in'
+						data-aos-delay='50'
+						data-aos-offset='350'
+						data-aos-easing='ease-in-out'
 						className={styles.copertinaFanzine}
 					/>
 				</div>
