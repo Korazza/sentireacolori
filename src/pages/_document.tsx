@@ -21,6 +21,7 @@ export default function Document() {
 					content='#4d65c8'
 					media='(prefers-color-scheme: dark)'
 				/>
+				<link rel='icon' type='image/png' href='/favicon.png' />
 			</Head>
 			<body>
 				<Main />
