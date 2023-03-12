@@ -59,9 +59,9 @@
 
 .rabbia {
   position: relative;
-  padding: 20% 0;
-  left: -10%;
-  width: 30%;
+  padding: 22% 0;
+  left: -12%;
+  width: 35%;
   height: 100%;
   transform: rotate(40deg);
 }
@@ -73,7 +73,7 @@
 .fanzine {
   position: relative;
   padding: 30% 0;
-  left: -10%;
+  left: -15%;
   width: 60%;
   height: 100%;
 }
