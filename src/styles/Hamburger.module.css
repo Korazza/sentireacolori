@@ -1,0 +1,40 @@
+.burger {
+  display: flex;
+  width: 2em;
+  height: 2em;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.burgerLine {
+  position: relative;
+  width: 2em;
+  height: 0.25em;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transform: rotate(0deg);
+  transition: all 200ms ease-in-out;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.burger.toggled {
+  justify-content: center;
+}
+
+
+.burger.toggled .burgerLine:nth-child(1) {
+  top: 14%;
+  transform: rotate(45deg);
+}
+
+.burger.toggled .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.toggled .burgerLine:nth-child(3) {
+  bottom: 14%;
+  transform: rotate(-45deg);
+}

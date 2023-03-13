@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import Logo from './Logo'
+import Hamburger from './Hamburger'
 import styles from '@/styles/Navbar.module.css'
 
 interface NavigationItem {
@@ -19,6 +21,7 @@ const navItems: NavigationItem[] = [
 
 export default function Navbar() {
 	const { data: session, status } = useSession()
+	const [menuToggle, setMenuToggle] = useState(false)
 
 	return (
 		<header className={styles.navbar}>
@@ -26,10 +29,24 @@ export default function Navbar() {
 				<Logo />
 			</Link>
 			<nav className={styles.navigationContainer}>
-				<ul className={styles.navigation}>
+				<Hamburger
+					toggle={menuToggle}
+					onToggle={() => setMenuToggle((prevToggle) => !prevToggle)}
+					className={styles.navBurger}
+				/>
+				<ul
+					className={styles.navigation}
+					style={{
+						right: menuToggle ? '-20%' : '-200%',
+					}}
+				>
 					{navItems.map((navItem) => (
 						<li key={navItem.label.toLocaleLowerCase()}>
-							<Link href={navItem.link} scroll={navItem.scroll}>
+							<Link
+								onClick={() => setMenuToggle(false)}
+								href={navItem.link}
+								scroll={navItem.scroll}
+							>
 								{navItem.label}
 							</Link>
 						</li>
