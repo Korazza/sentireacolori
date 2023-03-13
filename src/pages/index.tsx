@@ -36,17 +36,17 @@ export default function Home() {
 					<strong>
 						Ciao! Benvenut*
 						<br />
-						<u>Come é nato questo progetto?</u>
+						<u>Come è nato questo progetto?</u>
 					</strong>
 					<br />
 					<br />
-					Il progetto é nato da un&apos;esigenza di aiutare le persone che non
+					Il progetto è nato da un&apos;esigenza di aiutare le persone che non
 					riescono ad avere un rapporto &quot;sano&quot; con le proprie
 					emozioni, io per prima ho sempre avuto un rapporto complicato con
 					esse, crescendo peró ho iniziato a mettermi in discussione, a parlare
 					con &quot;me stessa&quot;, ho imparato ad ascoltarmi. E il mio
-					obiettivo é proprio quello di aiutare, per quanto possibile, a
-					normalizzare le nostre debolezze. Il progetto é nato da tre emozioni
+					obiettivo è proprio quello di aiutare, per quanto possibile, a
+					normalizzare le nostre debolezze. Il progetto è nato da tre emozioni
 					fondamentali:{' '}
 					<strong>
 						<u>Tristezza, Rabbia e Felicitá</u>. Sono tre delle emozioni piú
