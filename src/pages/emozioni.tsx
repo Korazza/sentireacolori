@@ -223,7 +223,7 @@ export default function Emozioni() {
 				<h1>
 					Ti spiego
 					<br />
-					cos&apos;é
+					cos&apos;è
 				</h1>
 				<div className={styles.emotion}>{emotion.name}</div>
 				<div
