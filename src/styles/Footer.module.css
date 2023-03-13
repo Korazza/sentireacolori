@@ -3,6 +3,7 @@
   font-size: 14px;
   height: fit-content;
   box-shadow: 0 0 16px #00000020;
+  z-index: 50;
 }
 
 .info {
@@ -47,4 +48,22 @@
   text-align: center;
   background-color: #e7736e;
   color: #ffffff;
+}
+
+@media screen and (width < 768px) {
+  .info {
+    padding: 0 3em;
+    padding-bottom: 3em;
+  }
+
+  .copertinaFanzine {
+    right: 1.5em;
+    position: absolute;
+  }
+}
+
+@media screen and (width < 520px) {
+  .copertinaFanzine {
+    display: none;
+  }
 }

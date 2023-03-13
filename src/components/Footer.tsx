@@ -16,7 +16,9 @@ export default function Footer() {
 				/>
 				<div className={styles.contatti}>
 					<span className={styles.heading}>Contatti</span>
-					<span>sentireacolori@gmail.com</span>
+					<Link href='mailto:sentireacolori@gmail.com' target='_blank'>
+						sentireacolori@gmail.com
+					</Link>
 					<span className={styles.number}>+39 3471234567</span>
 					<Link className={styles.social} href=''>
 						<Image
@@ -43,7 +45,11 @@ export default function Footer() {
 				</div>
 				<div className={styles.emotincolor}>
 					<span className={styles.heading}>Emotincolor</span>
-					<Link className={styles.social} href='#shop'>
+					<Link
+						className={styles.social}
+						href='https://issuu.com/francescabarchiesi/docs/francesca_barchiesi_18417_sentire_a_colori_libro_c'
+						target='_blank'
+					>
 						Fanzine
 					</Link>
 				</div>

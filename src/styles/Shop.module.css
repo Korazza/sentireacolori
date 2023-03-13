@@ -103,3 +103,15 @@
     flex-direction: column;
   }
 }
+
+@media screen and (width < 768px) {
+  .section {
+    height: fit-content;
+  }
+
+  .shop {
+    margin: 12% 0;
+    flex-direction: column;
+    gap: 2em;
+  }
+}

@@ -25,7 +25,7 @@
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 
@@ -68,4 +68,35 @@
 .user img {
   margin-right: 0.4em;
   border-radius: 50%;
+}
+
+@media screen and (width < 1280px) {
+  .navigation {
+    margin-left: 8em;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .navigation li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (width < 1024px) {
+  .navbar {
+    margin: 0;
+    width: 100%;
+  }
+
+  .navigation {
+    margin-left: 4em;
+    width: 80%;
+  }
+}
+
+@media screen and (width < 768px) {
+  .navigation {
+    margin-left: 2em;
+    width: 90%;
+  }
 }
