@@ -42,22 +42,16 @@ export default function Home() {
 					<br />
 					Il progetto é nato da un&apos;esigenza di aiutare le persone che non
 					riescono ad avere un rapporto
-					<br />
 					&quot;sano&quot; con le proprie emozioni, io per prima ho sempre avuto
 					un rapporto complicato con esse,
-					<br />
 					crescendo peró ho iniziato a mettermi in discussione, a parlare con
 					&quot;me stessa&quot;, ho imparato
-					<br />
 					ad ascoltarmi. E il mio obiettivo é proprio quello di aiutare, per
 					quanto possibile, a
-					<br />
 					normalizzare le nostre debolezze.
-					<br />
 					Il progetto é nato da tre emozioni fondamentali:{' '}
 					<strong>
 						<u>Tristezza, Rabbia e Felicitá</u>. Sono tre
-						<br />
 						delle emozioni piú forti che possiamo provare nella vita di tutti i
 						giorni
 					</strong>
