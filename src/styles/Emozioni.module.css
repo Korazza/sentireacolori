@@ -73,6 +73,7 @@
 
 .content {
   margin-left: 8%;
+  width: 30%;
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -96,6 +97,7 @@
   }
 
   .content {
+    width: 95%;
     margin-left: 0.5em;
     margin-bottom: 2em;
     font-size: 16px;
