@@ -173,6 +173,7 @@ export default function Emozioni() {
 						src={tristezza}
 						alt='tristezza'
 						fill={true}
+						sizes='(max-width: 768px) 33vw, (max-width: 1280px) 100vw'
 						placeholder='blur'
 						style={{
 							opacity: emotion.name === 'la tristezza' ? 1 : 0,
@@ -192,6 +193,7 @@ export default function Emozioni() {
 						src={rabbia}
 						alt='rabbia'
 						fill={true}
+						sizes='(max-width: 768px) 33vw, (max-width: 1280px) 100vw'
 						placeholder='blur'
 						style={{
 							opacity: emotion.name === 'la rabbia' ? 1 : 0,
@@ -211,6 +213,7 @@ export default function Emozioni() {
 						src={felicita}
 						alt='felicità'
 						fill={true}
+						sizes='(max-width: 768px) 33vw, (max-width: 1280px) 100vw'
 						placeholder='blur'
 						style={{
 							opacity: emotion.name === 'la felicità' ? 1 : 0,

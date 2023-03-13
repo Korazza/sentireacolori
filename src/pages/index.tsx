@@ -69,6 +69,7 @@ export default function Home() {
 						src={rabbia}
 						alt='Rabbia'
 						fill={true}
+						sizes='(max-width: 768px) 33vw, (max-width: 1280px) 100vw'
 						data-aos='fade-up-right'
 						data-aos-delay='350'
 						data-aos-offset='450'
@@ -81,6 +82,7 @@ export default function Home() {
 						src={fanzine}
 						alt='Fanzine'
 						fill={true}
+						sizes='(max-width: 768px) 33vw, (max-width: 1280px) 100vw'
 						data-aos='zoom-in'
 						data-aos-delay='50'
 						data-aos-offset='350'
