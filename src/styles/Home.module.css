@@ -71,12 +71,18 @@
   object-fit: contain;
 }
 
-.fanzine {
+.corto {
   position: relative;
-  padding: 30% 0;
-  left: -15%;
-  width: 60%;
-  height: 100%;
+  padding: 8% 0;
+  left: -50%;
+  transform: translateX(50%);
+}
+
+.corto video {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 0 16px #00000050;
 }
 
 .copertinaFanzine {
@@ -88,11 +94,29 @@
   .content2 {
     max-width: 60%;
   }
+
+  .rabbia {
+    display: none;
+  }
+
+  .corto {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (width < 1280px) {
   .content2 {
     max-width: 70%;
+  }
+
+  .corto {
+    width: 100%;
+    height: 100%;
+  }
+
+  .corto video {
+    border-radius: 0;
   }
 }
 
@@ -121,5 +145,9 @@
     margin: 25% auto;
     padding: 2em 1em;
     max-width: 100%;
+  }
+
+  .corto video {
+    box-shadow: 0 0 8px #00000050;
   }
 }

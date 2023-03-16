@@ -68,18 +68,17 @@ export default function Home() {
 						className={styles.rabbiaImg}
 					/>
 				</div>
-				<div className={styles.fanzine}>
-					<Image
-						src={fanzine}
-						alt='Fanzine'
-						fill={true}
-						sizes='(max-width: 768px) 33vw, (max-width: 1280px) 100vw'
-						data-aos='zoom-in'
+				<div className={styles.corto}>
+					<video
+						controls
+						autoPlay={true}
+						data-aos='fade-in'
 						data-aos-delay='50'
-						data-aos-offset='350'
-						data-aos-easing='ease-in-out'
-						className={styles.copertinaFanzine}
-					/>
+						data-aos-offset='300'
+						data-aos-easing='linear'
+					>
+						<source src='/videos/cortometraggio.mp4' type='video/mp4' />
+					</video>
 				</div>
 			</section>
 			<Footer />
