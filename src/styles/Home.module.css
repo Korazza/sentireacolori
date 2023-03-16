@@ -81,7 +81,7 @@
 .corto video {
   width: 100%;
   height: auto;
-  border-radius: 24px;
+  border-radius: 18px;
   box-shadow: 0 0 16px #00000050;
 }
 
@@ -95,13 +95,8 @@
     max-width: 60%;
   }
 
-  .rabbia {
-    display: none;
-  }
-
-  .corto {
-    left: 50%;
-    transform: translateX(-50%);
+  .corto video {
+    border-radius: 16px;
   }
 }
 
@@ -109,20 +104,26 @@
   .content2 {
     max-width: 70%;
   }
-
-  .corto {
-    width: 100%;
-    height: 100%;
-  }
-
-  .corto video {
-    border-radius: 0;
-  }
 }
 
 @media screen and (width < 1024px) {
   .content2 {
     max-width: 85%;
+  }
+
+  .rabbia {
+    display: none;
+  }
+
+  .corto {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .corto video {
+    border-radius: 0;
   }
 }
 
