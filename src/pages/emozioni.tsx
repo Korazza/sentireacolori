@@ -26,12 +26,10 @@ const EMOTIONS: Emotion[] = [
 			il momento di prenderci un momento per noi.
 		</strong>
 		Lei ci aiuta a
-		rimanere con i piedi per terra, perché, siamo sinceri avita non è
-		per
-		niente una passeggiata. Nella vita
+		rimanere con i piedi per terra, perché, siamo sinceri, la vita
+		non è per niente una passeggiata. Nella vita
 		<i>
 			è difficile che non si sperimenti
-			
 			la tristezza.
 		</i>
 	</p>
@@ -53,7 +51,7 @@ const EMOTIONS: Emotion[] = [
 			<u>
 				<i>
 					da piccoli hanno sempre tentato di distrarci, di farci
-					pensare a delle cose belle che tristi, a farci ridere.
+					pensare piú a delle cose belle che tristi, a farci ridere.
 				</i>
 			</u>
 		</strong>
@@ -63,7 +61,7 @@ const EMOTIONS: Emotion[] = [
 		backgroundColor: '#f1c9c0',
 		name: 'la rabbia',
 		content: `<p>
-		La rabbia è uno di quelle emozioni che ci insegnano a guardarla
+		La rabbia è una di quelle emozioni che ci insegnano a guardare
     come una cosa sbagliata. Io dico che non lo sia, è giusto provarle
     tutte, No? Sono quel che sono. Okay, la rabbia su alcune persone
     sfocia in ira, ma..
@@ -89,7 +87,7 @@ const EMOTIONS: Emotion[] = [
 	</p>
 	<p>
 		La rabbia è un pugno in pieno stomaco, ci fa dire cose che magari
-		non pensiamo realmente, ci fare azioni che non vorremmo compiere,
+		non pensiamo realmente, ci fa fare azioni che non vorremmo compiere,
 		la rabbia è una delle emozioni più forti che difficilmente non
 		proveremmo mai. La rabbia è un fuoco che tutti noi abbiamo, chi più
 		alimentato, chi più tenue, affievolito. Ma mai va sottovalutato.
@@ -111,7 +109,7 @@ const EMOTIONS: Emotion[] = [
 	<p>
 		La vita ci prende a calci in faccia ogni giorno, ci mette davanti
 		davvero tanti ostacoli, e le emozioni negative sono quelle che la
-		maggior parte del tempo prendonoil sopravvento.
+		maggior parte del tempo prendono il sopravvento.
 	</p>
 	<p>
 		Perciò sta a noi prendere in mano la situazione e cambiarla,
