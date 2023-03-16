@@ -13,12 +13,12 @@ export default function Document() {
 				<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
 				<meta
 					name='theme-color'
-					content='#4d65c8'
+					content='#e7736e'
 					media='(prefers-color-scheme: light)'
 				/>
 				<meta
 					name='theme-color'
-					content='#4d65c8'
+					content='#e7736e'
 					media='(prefers-color-scheme: dark)'
 				/>
 				<link rel='icon' type='image/png' href='/favicon.png' />
